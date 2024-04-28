@@ -1,0 +1,17 @@
+kind: Pod
+spec:
+  containers:
+    - name: kaniko
+      image: gcr.io/kaniko-project/executor:debug
+      imagePullPolicy: Always
+      command:
+        - sleep
+      args:
+        - 9999999
+      volumeMounts:
+        - name: kaniko-config
+          mountPath: /kaniko/.docker
+  volumes:
+    - name: kaniko-config
+      configMap:
+        name: kaniko-configmap

@@ -6,7 +6,7 @@ pipeline {
     }
     
     environment {
-        DOCKER_REGISTRY = "hub.docker.com"
+        DOCKER_REGISTRY = "index.docker.io"
         DOCKER_IMAGE = "bytefy/evolution-wpp"
         DOCKERFILE = "Dockerfile"
         
